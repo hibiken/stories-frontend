@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import TagList from './TagList';
+import FollowingTagList from '../containers/FollowingTagList';
 
 const tags = [
   { id: 1, name: 'music' },
@@ -24,7 +25,7 @@ export default class App extends Component {
         <div className="col-md-4">
           <TagList tags={tags} heading="Featured Tags" />
 
-          <TagList tags={followingTags} heading="Tags You Follow" />
+          <FollowingTagList heading="Tags You Follow" />
         </div>
       </div>
     );

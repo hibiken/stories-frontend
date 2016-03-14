@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import followingTags from './followingTags';
 
-const rootReducer = combineReducers({
-  state: (state = {}) => state
+const storiesApp = combineReducers({
+  followingTags
 });
 
-export default rootReducer;
+export default storiesApp;
