@@ -1,3 +1,16 @@
+import axios from 'axios';
+
+const ROOT_URL = 'http://localhost:3000/api';
+
+export const fetchFeaturedTags = () => {
+  const request = axios.get(`${ROOT_URL}/tags.json`);
+
+  return {
+    type: 'FETCH_FEATURED_TAGS',
+    payload: request
+  }
+}
+
 export const followTag = (id, name) => {
   return {
     type: 'FOLLOW_TAG',
