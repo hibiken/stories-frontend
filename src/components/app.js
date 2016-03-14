@@ -8,6 +8,11 @@ const tags = [
   { id: 2, name: 'sports' },
   { id: 3, name: 'travel' }
 ];
+
+const followingTags = [
+  { id: 4, name: 'Programming' },
+  { id: 5, name: 'JavaScript' },
+];
 export default class App extends Component {
   render() {
     return (
@@ -18,6 +23,8 @@ export default class App extends Component {
 
         <div className="col-md-4">
           <TagList tags={tags} heading="Featured Tags" />
+
+          <TagList tags={followingTags} heading="Tags You Follow" />
         </div>
       </div>
     );
