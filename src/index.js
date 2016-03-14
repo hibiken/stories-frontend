@@ -26,3 +26,6 @@ ReactDOM.render(
     <Router history={browserHistory} routes={routes} />
   </Provider>
   , document.querySelector('.container'));
+
+
+console.log(store.getState());

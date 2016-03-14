@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import PostPanelList from '../containers/PostPanelList';
 import FeaturedTagList from '../containers/FeaturedTagList';
 import FollowingTagList from '../containers/FollowingTagList';
 import { fetchFeaturedTags } from '../actions';
 
 class Dashboard extends React.Component {
   componentWillMount() {
-    console.log('this would be a good time to go fetch featured tags');
     this.props.fetchFeaturedTags();
   }
 
@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <div className="col-md-6 col-md-offset-1">
-          <h1>Hello React</h1>
+          <PostPanelList />
         </div>
 
         <div className="col-md-4">
